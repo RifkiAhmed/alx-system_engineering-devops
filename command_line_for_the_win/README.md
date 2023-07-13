@@ -1,4 +1,5 @@
 ALX SE program: Command line for the win project
+
 Steps I followed for using SFTPcommand-line tool to move my local screenshots to the sandbox environment
 
             step 1: Open cmd prompt
