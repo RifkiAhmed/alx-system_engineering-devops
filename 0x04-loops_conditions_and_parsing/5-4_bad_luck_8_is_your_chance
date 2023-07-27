@@ -6,8 +6,8 @@
 _i="0"
 while [ $_i -lt 10 ]
 do
-	if [ $_i -eq 4 ]; then echo bad luck
-	elif [ $_i -eq 8 ]; then echo good luck
+	if [ $_i -eq 3 ]; then echo bad luck # 4th iteartion in the loop, since  _i starts from 0
+	elif [ $_i -eq 7 ]; then echo good luck # 8th iteartion in the loop, since  _i starts from 0
 	else
 		echo Best School
 	fi
