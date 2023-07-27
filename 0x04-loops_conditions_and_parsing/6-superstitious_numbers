@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Bash script that loops from 0 to 9 
+# 	if 4th iteration displays bad luck,
+#	if 8th displays good luck
+#	else displays Best School
+_i="0"
+while [ $_i -lt 20 ]
+do
+	_i=$((_i+1))
+	echo $_i
+	case $_i in
+		4) echo bad luck from China;;
+		9) echo bad luck from Japan;;
+		17) echo bad luck from Italy;;
+	esac
+done
