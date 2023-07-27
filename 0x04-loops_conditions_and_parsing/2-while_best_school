@@ -5,5 +5,5 @@ _i="0"
 while [ $_i -lt 10 ]
 do
 	echo Best School
-	_i=$[$_i+1]
+	_i=$((_i+1))
 done
