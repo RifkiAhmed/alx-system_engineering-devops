@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Bash script that displays Best School 10 times using WHILE loop
+# shellcheck disable=SC2034
+_i="0"
+while [ $_i -lt 10 ]
+do
+	echo Best School
+	_i=$[$_i+1]
+done
