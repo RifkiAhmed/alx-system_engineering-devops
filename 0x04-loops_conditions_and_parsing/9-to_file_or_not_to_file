@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that displays Best School 10 times using For loop
-# shellcheck disable=SC2034
+# Bash script that gives you information about the school file
 
 if [ -e ./school ]
 	then
