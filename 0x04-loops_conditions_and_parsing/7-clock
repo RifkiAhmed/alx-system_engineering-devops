@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
-# Bash script that loops from 0 to 9 
-# 	if 4th iteration displays bad luck,
-#	if 8th displays good luck
-#	else displays Best School
+# Bash script that displays the time for 12 hours and 59 minutes
+
 _m="0"
 _h="0"
-while [ $_h -lt 13 ]
+while [ $_h -le 12 ]
 do
-	if (( _m % 60 == 0 ))
-	then
+	if (( _m == 0 )); then
 		echo Hour: $_h
-		_h=$((_h+1))
 		_m="1"
+	elif (( _m == 60 )); then
+		_h=$((_h+1))
+		_m="0"
 	else
 		echo $_m
 		_m=$((_m+1))
