@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Bash script that displays To infinity and beyond indefinitely
-#	In between each iteration of the loop, add a sleep 2
+#	In between each iteration of the loop, program pause for 2 seconds
 #	displays I am invincible!!! when receiving a SIGTERM signal
 while :
 do
