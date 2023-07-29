@@ -4,7 +4,7 @@
 #	- usage : manage_my_process {start | stop | restart }
 #	- When passing the argument start :
 #		===> Starts manage_my_process
-#		===> Create a file containing PID in /var/run/my_process.pid
+#		===> Create /var/run/my_process.pid file containing the PID
 #		===> Displays manage_my_process started
 #	- When passing the argument stop :
 #		===> Stops manage_my_process
@@ -14,8 +14,9 @@
 #		===> Stops manage_my_process
 #		===> Deletes the file /var/run/my_process.pid
 #		===> Starts manage_my_process
-#		===> Creates a file containing its PID in /var/run/my_process.pid
+#		===> Creates /var/run/my_process.pid file containing the PID
 #		===> Displays manage_my_process restarted
+#.
 start() {
 	./manage_my_process &
 	echo "$!" > /var/run/my_process.pid
