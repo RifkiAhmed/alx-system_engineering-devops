@@ -18,7 +18,7 @@
 #		===> Displays manage_my_process restarted
 start() {
 	./manage_my_process &
-	touch "$$" > /var/run/my_process.pid
+	echo "$$" > /var/run/my_process.pid
 }
 stop() {
 	kill "$(cat /var/run/my_process.pid)"
