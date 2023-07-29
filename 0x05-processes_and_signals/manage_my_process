@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Bash scripts that indefinitely writes I am alive to the file /tmp/my_process
+#	in between every prints message, the program pause for 2 seconds
+while :
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
