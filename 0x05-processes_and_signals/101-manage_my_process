@@ -22,7 +22,7 @@ start() {
 }
 stop() {
 	kill "$(cat /var/run/my_process.pid)"
-	rm /var/run/my_process.pid
+	rm -f /var/run/my_process.pid
 }
 restart() {
 	stop
@@ -30,8 +30,8 @@ restart() {
 }
 
 case "$1" in
-	start) start; echo "manage_my_process started";;
-	stop) stop; echo "manage_my_process stopped";;
-	restart) restart; echo "manage_my_process restarted";;
-	*) echo "Usage: manage_my_process {start|stop|restart}";;
+	start) "$1" && echo "manage_my_process started" ;;
+	stop) "$1" && echo "manage_my_process stopped" ;;
+	restart) "$1" && echo "manage_my_process restarted" ;;
+	*) echo "Usage: manage_my_process {start|stop|restart}" && exit 1 ;;
 esac
