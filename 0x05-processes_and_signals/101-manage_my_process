@@ -31,7 +31,7 @@ restart() {
 
 case "$1" in
 	start) start; echo "manage_my_process started";;
-	stop) stop; echo "manage_my_process stoped";;
+	stop) stop; echo "manage_my_process stopped";;
 	restart) restart; echo "manage_my_process restarted";;
 	*) echo "Usage: manage_my_process {start|stop|restart}";;
 esac
