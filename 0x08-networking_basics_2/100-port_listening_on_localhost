@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Bash script that listens on port 98 on localhost
+
+#nc command listen on arbitrary TCP and UDP connections
+#	Option -l : Used to specify that nc should listen for an incoming
+#		    connection rather than initiate a connection to a remote host
+
+nc -l localhost 98
