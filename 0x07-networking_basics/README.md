@@ -37,7 +37,7 @@
 
 #### Tasks:
 
-##### Task 0:[](0-OSI_model)
+##### Task 0:[0-OSI_model](0-OSI_model)
 
 **What is the OSI model?**
 
@@ -55,7 +55,7 @@
 
 - [ ] Randomly
 
-#####Task 1:[](1-types_of_network)
+#####Task 1:[1-types_of_network](1-types_of_network)
 
 #### AUTHOR:
 Ahmed RIFKI <sup>[@AhmedSeeker](https://github.com/AhmedSeeker)</sup>
