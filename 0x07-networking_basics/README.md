@@ -1,7 +1,7 @@
-### ALX AFRICA SE Prgram
+## ALX AFRICA SE Prgram
 
-#### Project : 0x07. Networking basics #0 <sup> ``` DevOps ``` ``` Network ```</sup>
-##### Learning Objectives :
+### Project : 0x07. Networking basics #0 <sup> ``` DevOps ``` ``` Network ```</sup>
+#### Learning Objectives :
 
 ###### OSI Model
 ```
