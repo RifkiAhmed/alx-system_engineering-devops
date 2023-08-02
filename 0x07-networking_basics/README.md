@@ -1,4 +1,4 @@
-### ALX AFRICA SE Prgram: <sup>```DevOps```</sup><sup>```Network```</sup>
+### ALX AFRICA SE Prgram: <sup>```DevOps```</sup> <sup>```Network```</sup>
 
 #### Project : 0x07. Networking basics #0
 ##### Learning Objectives :
@@ -35,4 +35,4 @@
 - What tool/protocol is often used to check if a device is connected to a network
 ```
 #### AUTHOR:
-Ahmed RIFKI <sup style="color: green">[AhmedSeeker](https://github.com/AhmedSeeker)</sup>
+Ahmed RIFKI <sup>[AhmedSeeker](https://github.com/AhmedSeeker)</sup>
