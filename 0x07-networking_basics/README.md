@@ -1,32 +1,32 @@
 ## ALX AFRICA SE Prgram
 
-### Project : 0x07. Networking basics #0 <sup> ``` DevOps ``` ``` Network ```</sup>
-### Learning Objectives :
+### **Project : 0x07. Networking basics #0 <sup> ``` DevOps ``` ``` Network ```</sup>**
+### **Learning Objectives :**
 
-###### OSI Model
+###### **OSI Model**
 ```
 - What it is
 - How many layers it has
 - How it is organized
 ```
-###### What is a LAN
+###### **What is a LAN**
 ```
 - Typical usage
 - Typical geographical size
 ```
-###### What is a WAN
+###### **What is a WAN**
 ```
 - Typical usage
 - Typical geographical size
 ```
-###### What is the Internet
+###### **What is the Internet**
 ```
 - What is an IP address
 - What are the 2 types of IP address
 - What is a subnet
 - Why IPv6 was created
 ```
-###### TCP/UDP
+###### **TCP/UDP**
 ```
 - What are the 2 mainly used data transfer protocols for IP (transfer level on the OSI schema)
 - What is the main difference between TCP and UDP
@@ -37,7 +37,7 @@
 
 
 
-### Tasks:
+### **Tasks:**
 
 ### **Task 0: [0-OSI_model](0-OSI_model)**
 #####  What is the OSI model?
