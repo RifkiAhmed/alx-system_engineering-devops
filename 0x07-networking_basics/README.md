@@ -35,4 +35,4 @@
 - What tool/protocol is often used to check if a device is connected to a network
 ```
 #### AUTHOR:
-Ahmed RIFKI <sup>[AhmedSeeker](https://github.com/AhmedSeeker)</sup>
+Ahmed RIFKI <sup>@AhmedSeeker</sup>
