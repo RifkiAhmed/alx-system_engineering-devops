@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Bash script that displays all active IPv4 IPs on the machine it’s executed on
+
+#ifconfig command configures a network interface
+#	If no arguments are given, ifconfig displays the status of the
+#       currently active interfaces.
+
+#grep command prints lines that match patterns
+#	Option -o : Print only the matched (non-empty) parts of a matching line,
+#		    with each such part on a separate output line.
+#	Option -E : Interpret PATTERNS as extended regular expressions (ERE)
+
+#cut command remove sections from each line of files
+#	Option -d DELIM : use DELIM instead of TAB for field delimiter
+#	Option -f N : select only this N'th field
+#	Option -s : do not print lines not containing delimiters
+
+ifconfig | grep -oE 'inet .*?\s' | cut -d ' ' -f2 -s
