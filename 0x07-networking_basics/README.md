@@ -1,8 +1,8 @@
-ALX AFRICA SE Prgram: "DevOps" "Network"
+###ALX AFRICA SE Prgram: "DevOps" "Network"
 
-	Project : 0x07. Networking basics #0
-	Learning Objectives :
-		* OSI Model
+	#Project : 0x07. Networking basics #0
+	##Learning Objectives :
+		[####OSI Model](0-OSI_model)
 			- What it is
 			- How many layers it has
 			- How it is organized
