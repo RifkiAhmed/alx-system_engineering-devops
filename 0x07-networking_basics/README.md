@@ -1,4 +1,4 @@
-### ALX AFRICA SE Prgram: <sub>`#0969DA`DevOps Network</sub>
+### ALX AFRICA SE Prgram: <sup>```DevOps Network```</sup>
 
 #### Project : 0x07. Networking basics #0
 ##### Learning Objectives :
@@ -33,5 +33,5 @@
 - Memorize SSH, HTTP and HTTPS port numbers
 - What tool/protocol is often used to check if a device is connected to a network
 ```
-####AUTHOR:
+#### AUTHOR:
 Ahmed RIFKI <a>AhmeedSeeker</a>
