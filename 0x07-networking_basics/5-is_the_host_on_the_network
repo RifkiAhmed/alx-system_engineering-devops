@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 # Bash script that pings an IP address passed as an argument
 #	Requirements:
-#		Accepts a string as an argument
-#		Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
-#		Ping the IP 5 times
+#	- Accepts a string as an argument
+#	- Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
+#	- Ping the IP 5 times
+
+# ping command that sends ICMP ECHO_REQUEST to network hosts to
+#       elicit an ICMP ECHO_RESPONSE.
+#	Option : -c (count) Stop after sending count ECHO_REQUEST packets.
+
 case $1 in
 	"") echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}" && exit 1 ;;
 	*) ping -c 5 "$1" ;;
