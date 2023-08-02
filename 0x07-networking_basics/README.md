@@ -39,7 +39,7 @@
 
 ### Tasks:
 
-**Task 0: [0-OSI_model](0-OSI_model)**
+###**Task 0: [0-OSI_model](0-OSI_model)**
 #####  What is the OSI model?
 - [ ] 1.Set of specifications that network hardware manufacturers must respect
 - [ ] 2.The OSI model is a conceptual model that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology
@@ -51,7 +51,7 @@
 - [ ] 3.Randomly
 
 
-**Task 1: [1-types_of_network](1-types_of_network)**
+###**Task 1: [1-types_of_network](1-types_of_network)**
 #### What type of network a computer in local is connected to?
 - [ ] 1.Internet
 - [ ] 2.WAN
@@ -68,7 +68,7 @@
 - [ ] 3.LAN
 
 
-**Task 2: [2-MAC_and_IP_address](2-MAC_and_IP_address)**
+###**Task 2: [2-MAC_and_IP_address](2-MAC_and_IP_address)**
 #### What is a MAC address?
 - [ ] 1.The name of a network interface
 - [ ] 2.The unique identifier of a network interface
@@ -80,7 +80,7 @@
 - [ ] 3.Is a number that network devices use to connect to networks
 
 
-**Task 3: [3-UDP_and_TCP](3-UDP_and_TCP)**
+###**Task 3: [3-UDP_and_TCP](3-UDP_and_TCP)**
 #### Which statement is correct for the TCP box:
 - [ ] 1.It is a protocol that is transferring data in a slow way but surely
 - [ ] 2.It is a protocol that is transferring data in a fast way and might loss data along in the process
@@ -94,7 +94,7 @@
 - [ ] 2.May I increase the rate at which I am sending you boxes?
 
 
-**Task 4: [4-TCP_and_UDP_ports](4-TCP_and_UDP_ports)**
+###**Task 4: [4-TCP_and_UDP_ports](4-TCP_and_UDP_ports)**
 ```
  - Bash script that displays listening ports.
 	Requirements:
@@ -103,7 +103,7 @@
 ```
 
 
-**Task 5: [5-is_the_host_on_the_network](5-is_the_host_on_the_network)**
+###**Task 5: [5-is_the_host_on_the_network](5-is_the_host_on_the_network)**
 ```
  - Bash script that pings an IP address passed as an argument.
 	Requirements:
