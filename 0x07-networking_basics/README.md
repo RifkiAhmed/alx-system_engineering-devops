@@ -75,7 +75,7 @@
 ```
  - Bash script that displays listening ports.
 	Requirements:
-		- That only shows listening sockets `#0969AD(IP + port = socket)`
+		- That only shows listening sockets (IP + port = socket)
 		- That shows the PID and name of the program to which each socket belongs
 ```
 
