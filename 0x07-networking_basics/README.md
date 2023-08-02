@@ -3,8 +3,8 @@
 #### Project : 0x07. Networking basics #0
 ##### Learning Objectives :
 
-```
 ###### OSI Model
+```
 - What it is
 - How many layers it has
 - How it is organized
@@ -35,4 +35,4 @@
 - What tool/protocol is often used to check if a device is connected to a network
 ```
 #### AUTHOR:
-Ahmed RIFKI <a>AhmeedSeeker</a>
+Ahmed RIFKI [AhmedSeeker](https://github.com/AhmedSeeker)
