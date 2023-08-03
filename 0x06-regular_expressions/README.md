@@ -25,7 +25,8 @@ For this project, we have to build our regular expression using Oniguruma, a reg
 - Your regex should not contain square brackets
 
 #### **Task 5:** [5-beginning_and_end.rb](5-beginning_and_end.rb) <sup>:green_circle:</sup> <!-- :computer:💻 :mag_right:🔎 :mag:🔍 :bulb:💡 -->
-``` - The regular expression must be exactly matching a string that starts with ``h`` ends with ``n`` and can have any single character in between
+```
+- The regular expression must be exactly matching a string that starts with ``h`` ends with ``n`` and can have any single character in between
 ```
 #### **Task 6:** [6-phone_number.rb](6-phone_number.rb) <sup>:green_circle:</sup> <!-- :computer:💻 :mag_right:🔎 :mag:🔍 :bulb:💡 -->
 -  The regular expression must match a 10 digit phone number
