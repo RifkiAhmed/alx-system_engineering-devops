@@ -26,7 +26,7 @@
 
 #### **Task 1:**
 	- Bash script that displays all active IPv4 IPs on the machine it’s executed on
-[:+1: 1-show_attached_IPs](1-show_attached_IPs)
+:green_circle:[1-show_attached_IPs](1-show_attached_IPs)
 
 
 #### **Task 2:**
