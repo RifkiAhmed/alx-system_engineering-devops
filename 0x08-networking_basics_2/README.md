@@ -17,7 +17,7 @@
 ### **Tasks:**
 
 #### **Task 0:**
-[0-change_your_home_IP](0-change_your_home_IP)
+[0-change_your_home_IP](0-change_your_home_IP)<br\>
 	- Bash script that configures an Ubuntu server with the below requirements
 		Requirements:
 		- localhost resolves to 127.0.0.2
