@@ -1,7 +1,7 @@
 ## ALX AFRICA SE Prgram
 
-### **Project : 0x07. Networking basics #0 <sup> ``` DevOps ``` ``` Network ```</sup>**
-### **Learning Objectives :**
+### **Project : 0x07. Networking basics #0 <sup> `` DevOps `` `` Network ``</sup>**
+### **Learning Objectives:**
 
 ###### **OSI Model**
  - What it is
@@ -19,6 +19,7 @@
 ###### **What is the Internet**
  - What is an IP address
  - What are the 2 types of IP address
+ - What is ``localhost``
  - What is a subnet
  - Why IPv6 was created
 
@@ -33,7 +34,7 @@
 
 ### **Tasks:**
 
-### **Task 0:** [0-OSI_model](0-OSI_model)
+### **Task 0:** [0-OSI_model](0-OSI_model) :green_circle:
 #####  What is the OSI model?
 - [ ] 2.The OSI model is a conceptual model that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology
 
@@ -41,7 +42,7 @@
 - [ ] 2.From the lowest to the highest level
 
 
-### **Task 1:** [1-types_of_network](1-types_of_network)
+### **Task 1:** [1-types_of_network](1-types_of_network) :green_circle:
 #### What type of network a computer in local is connected to?
 - [ ] 3.LAN
 
@@ -52,7 +53,7 @@
 - [ ] 1.Internet
 
 
-### **Task 2:** [2-MAC_and_IP_address](2-MAC_and_IP_address)
+### **Task 2:** [2-MAC_and_IP_address](2-MAC_and_IP_address) :green_circle:
 #### What is a MAC address?
 - [ ] 2.The unique identifier of a network interface
 
@@ -60,7 +61,7 @@
 - [ ] 1.Is to devices connected to a network what postal address is to houses
 
 
-### **Task 3:** [3-UDP_and_TCP](3-UDP_and_TCP)
+### **Task 3:** [3-UDP_and_TCP](3-UDP_and_TCP) :green_circle:
 #### Which statement is correct for the TCP box:
 - [ ] 1.It is a protocol that is transferring data in a slow way but surely
 
@@ -71,16 +72,16 @@
 - [ ] 1.Have you received boxes x, y, z?
 
 
-### **Task 4:** [4-TCP_and_UDP_ports](4-TCP_and_UDP_ports)
+### **Task 4:** [4-TCP_and_UDP_ports](4-TCP_and_UDP_ports) :green_circle:
 ```
  - Bash script that displays listening ports.
 	Requirements:
-	- That only shows listening sockets (IP + port = socket)
+	- That only shows listening sockets ``(IP + port = socket)``
 	- That shows the PID and name of the program to which each socket belongs
 ```
 
 
-### **Task 5:** [5-is_the_host_on_the_network](5-is_the_host_on_the_network)
+### **Task 5:** [5-is_the_host_on_the_network](5-is_the_host_on_the_network) :green_circle:
 ```
  - Bash script that pings an IP address passed as an argument.
 	Requirements:
