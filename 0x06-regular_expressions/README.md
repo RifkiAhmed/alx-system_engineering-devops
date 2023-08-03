@@ -17,10 +17,7 @@ For this project, we have to build our regular expression using Oniguruma, a reg
 - Find the regular expression that will match the cases in [1-repetition_token_0.png](1-repetition_token_0.png)
 ```
 #### **Task 2:** [2-repetition_token_1.rb](2-repetition_token_1.rb) <sup>:green_circle:</sup> <!-- :computer:💻 :mag_right:🔎 :mag:🔍 :bulb:💡 -->
-```
-- Find the regular expression that will match the cases in
-```
-[2-repetition_token_1.png](2-repetition_token_1.png)
+> - Find the regular expression that will match the cases in [2-repetition_token_1.png](2-repetition_token_1.png)
 
 #### **Task 3:** [3-repetition_token_2.rb](3-repetition_token_2.rb) <sup>:green_circle:</sup> <!-- :computer:💻 :mag_right:🔎 :mag:🔍 :bulb:💡 -->
 ```
