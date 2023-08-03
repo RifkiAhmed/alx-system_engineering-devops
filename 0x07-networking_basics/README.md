@@ -61,7 +61,7 @@
 - [ ] 1.Is to devices connected to a network what postal address is to houses
 
 
-### **Task 3:** [3-UDP_and_TCP](3-UDP_and_TCP) </sup>:green_circle:</sup>
+### **Task 3:** [3-UDP_and_TCP](3-UDP_and_TCP) <sup>:green_circle:</sup>
 #### Which statement is correct for the TCP box:
 - [ ] 1.It is a protocol that is transferring data in a slow way but surely
 
