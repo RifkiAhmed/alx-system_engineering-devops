@@ -4,7 +4,7 @@
 ### **Learning Objectives:**
  - What is localhost/127.0.0.1
  - What is 0.0.0.0
- - What is /etc/hosts
+ - What is ``/etc/hosts``
  - How to display your machine’s active network interfaces
 
 ### **Resources:**
@@ -23,11 +23,11 @@
 		- facebook.com resolves to 8.8.8.8
 
 
-#### **Task 1:** [1-show_attached_IPs](1-show_attached_IPs) <sub>:green_circle:</sub>
+#### **Task 1:** [1-show_attached_IPs](1-show_attached_IPs) <sup>:green_circle:</sup>
 	- Bash script that displays all active IPv4 IPs on the machine it’s executed on
 
 
-#### **Task 2:** [100-port_listening_on_localhost](100-port_listening_on_localhost) :green_circle:
+#### **Task 2:** [100-port_listening_on_localhost](100-port_listening_on_localhost) <sup>:green_circle:</sup>
 	- Bash script that listens on port 98 on localhost
 
 
