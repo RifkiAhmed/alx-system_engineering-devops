@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair.
+# Command description:
+#   ssh-keygen : authentication key generation, management and conversion
+# Options description:
+#  -b : Specifies the number of bits in the key to create.  For RSA keys, the minimum size is 768 bits
+#  -f : Specifies the filename of the key file.
+#  -N : Provides the new passphrase.
+# Note: RSA is the default type of key to create.
+ssh-keygen -b 4096 -f school -N betty
