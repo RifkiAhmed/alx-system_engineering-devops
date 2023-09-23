@@ -3,7 +3,8 @@
 # Command description:
 #   ssh-keygen : authentication key generation, management and conversion
 # Options description:
-#  -b : Specifies the number of bits in the key to create.  For RSA keys, the minimum size is 768 bits
+#  -b : Specifies the number of bits in the key to create.
+#       For RSA keys, the minimum size is 1024 bits and the default is 3072 bits
 #  -f : Specifies the filename of the key file.
 #  -N : Provides the new passphrase.
 # Note: RSA is the default type of key to create.
