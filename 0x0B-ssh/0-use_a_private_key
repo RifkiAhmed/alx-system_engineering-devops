@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 # Bash script that uses ssh to connect to a server using server ip address, the private key ~/.ssh/school with the user ubuntu
-server="54.236.48.13".
+# Command description:
+#  ssh : is a program for logging into a remote machine and for executing commands on a remote machine.
+# Option description:
+#  -i : Selects a file from which the identity (private key) for public key authentication is read.&
+server="100.25.34.143"
 ssh -i ~/.ssh/school ubuntu@$server
