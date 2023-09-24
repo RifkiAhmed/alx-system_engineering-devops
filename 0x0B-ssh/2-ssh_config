@@ -1,8 +1,8 @@
 # SSH client configuration
 
-Host *
-PasswordAuthentication no
-IdentityFile ~/.ssh/school
-SendEnv LANG LC_*
-HashKnownHosts yes
-GSSAPIAuthentication yes
+Host 100.25.34.143
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
