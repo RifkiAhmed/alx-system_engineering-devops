@@ -8,10 +8,10 @@ echo "Ceci n'est pas une page" | sudo tee '/var/www/html/error_404.html'
 
 REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
 sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\tlocation /redirect_me \
-	{\n\t\treturn 301 '${REDIRECTION}';\n\t}@" /etc/nginx/sites-available/default
+	{\n\t\treturn 301 ${REDIRECTION};\n\t}@" /etc/nginx/sites-available/default
 
 
 sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\terror_page 404 /error_404.html;\
-	\n\n\tlocation = /error_404.html{\n\t\troot /var/www/html;\n\t\tinternal;\n\t}\n@" /etc/nginx/sites-available/default
+	\n\n\tlocation = /error_404.html{\n\t\tinternal;\n\t}\n@" /etc/nginx/sites-available/default
 
 sudo service nginx start
