@@ -2,21 +2,19 @@
 # Install Nginx web server
 sudo apt-get update
 sudo apt-get install nginx -y
-sudo service nginx start
-# Configure home page
+
 echo "Hello World!" | sudo tee '/var/www/html/index.html'
+echo "Ceci n'est pas une page" | sudo tee '/var/www/html/error_404.html'
+
 sudo sed -i "s@^\troot /var/www/html;@\troot /var/www/html;\n\n\tindex index.html;\n@" /etc/nginx/sites-available/default
-# Configure /redirect_me to redirect to the destination below.
+
 REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
 sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\tlocation /redirect_me \
 	{\n\t\treturn 301 '${REDIRECTION}';\n\t}@" /etc/nginx/sites-available/default
 
-# Create the error 404 page
-echo "Ceci n'est pas une page" | sudo tee '/var/www/html/error_404.html'
 
-# Configure Nginx to use the error 404 page
-sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\terror_page 404 error_404.html;\
+sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\terror_page 404 /error_404.html;\
 	\n\n\tlocation = /error_404.html{\n\t\tinternal;\n\t}\n@" /etc/nginx/sites-available/default
-sudo sed -i "s/=404/\/error_404.html/g" /etc/nginx/sites-available/default
-# Restart Nginx service
+sudo sed -i "s/=404/\/errddor_404.html/g" /etc/nginx/sites-available/default
+
 sudo service nginx restart
