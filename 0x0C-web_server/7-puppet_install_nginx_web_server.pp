@@ -1,4 +1,4 @@
-# Install Nginx web server with Puppet
+# Install and configure Nginx web server with Puppet
 
 exec {'apt_update':
   command     => 'sudo apt update',
@@ -23,12 +23,6 @@ file {'/var/www/html/index.html':
   require => Package['nginx'],
 }
 
-file {'/var/www/html/404.html':
-  ensure  => file,
-  content => "Ceci n'est pas une page",
-  require => Package['nginx'],
-}
-
 file {'/etc/nginx/sites-available/default':
   ensure  => file,
   content => "
@@ -38,18 +32,8 @@ server {
 
       root /var/www/html;
 
-      error_page 404 /404.html;
-
-      location = /404.html {
-      		internal;
-      }
-
       location /redirect_me {
       		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-      }
-
-      location / {
-      		try_files \$uri \$uri/ =404;
       }
 }",
   require => Package['nginx'],
