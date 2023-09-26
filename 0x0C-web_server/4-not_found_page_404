@@ -19,4 +19,4 @@ sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\terror_page 404 er
 	\n\n\tlocation = /error_404.html{\n\t\tinternal;\n\t}\n@" /etc/nginx/sites-available/default
 sudo sed -i "s/=404/\/error_404.html/g" /etc/nginx/sites-available/default
 # Restart Nginx service
-sudo service nginx restart
+sudo service nginx reload
