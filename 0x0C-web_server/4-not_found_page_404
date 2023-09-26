@@ -5,7 +5,7 @@ sudo apt-get install nginx -y
 
 # Configure home page
 echo "Hello World!" | sudo tee '/var/www/html/index.html'
-
+sudo sed -i "s@^\troot /var/www/html;@\troot /var/www/html;\n\n\tindex index.html;\n@" /etc/nginx/sites-available/default
 # Configure /redirect_me to redirect to the destination below.
 REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
 sudo sed -i "s@^\troot /var/www/html;@root /var/www/html;\n\n\tlocation /redirect_me \
