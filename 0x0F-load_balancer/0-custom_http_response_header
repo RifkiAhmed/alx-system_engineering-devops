@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
-# Configure Nginx so that its HTTP response contains a custom header {X-Served-By: hostname of the server Nginx}
+# Install Nginx web server
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo service nginx start
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+sudo sed -i "s@^\troot /var/www/html;@&\n\n\tlocation /redirect_me {\n\t\treturn 301 ${REDIRECTION};\n\t}@" /etc/nginx/sites-available/default
+sudo sed -i "s@^\troot /var/www/html;@&\n\n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}@" /etc/nginx/sites-available/default
 
 file="/etc/nginx/nginx.conf"
 script="\%^http {%a\ \t# custom header\n\tadd_header X-Served-By \${hostname};\n"
 sudo sed -i "${script}" "${file}"
-sudo service nginx restart
+sudo service nginx reload
