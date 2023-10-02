@@ -1,9 +1,8 @@
 # Install and configure Nginx web server with Puppet
 
 exec {'apt_update':
-  command     => 'sudo apt-get update',
+  command     => 'apt-get update',
   path        => ['/usr/bin', '/usr/sbin'],
-  refreshonly => true,
 }
 
 package {'nginx':
@@ -18,7 +17,7 @@ exec {'header':
 }
 
 exec {'restart':
-  command => 'sudo service nginx restart',
+  command => 'service nginx restart',
   path    => ['/usr/bin', '/usr/sbin'],
   require => Exec['header'],
 }
