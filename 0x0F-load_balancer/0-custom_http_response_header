@@ -2,15 +2,19 @@
 # Install Nginx web server
 sudo apt-get update
 sudo apt-get install nginx -y
-sudo service nginx start
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
-sudo sed -i "s@^\troot /var/www/html;@&\n\n\tlocation /redirect_me {\n\t\treturn 301 ${REDIRECTION};\n\t}@" /etc/nginx/sites-available/default
-sudo sed -i "s@^\troot /var/www/html;@&\n\n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}@" /etc/nginx/sites-available/default
 
-file="/etc/nginx/sites-available/default"
-script="\%^\tlocation / {%a\ \t# custom header\n\tadd_header X-Served-By \${hostname};\n"
-sudo sed -i "${script}" "${file}"
-sudo service nginx reload
+REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+FILE="/etc/nginx/sites-available/default"
+
+SCRIPT_1="\%^\troot /var/www/html;%a\ \n\tlocation /redirect_me {\n\t\treturn 301 ${REDIRECTION};\n\t}"
+sudo sed -i "${SCRIPT_1}" "${FILE}"
+
+SCRIPT_2="\%^\troot /var/www/html;%a\ \n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}"
+sudo sed -i "${SCRIPT_2}" "${FILE}"
+
+SCRIPT_3="\%^\tlocation / {%a\ \t\t# custom header\n\t\tadd_header X-Served-By \${hostname};\n"
+sudo sed -i "${SCRIPT_3}" "${FILE}"
+sudo service nginx restart
