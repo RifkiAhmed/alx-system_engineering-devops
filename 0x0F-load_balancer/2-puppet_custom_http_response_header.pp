@@ -1,23 +1,24 @@
 # Install and configure Nginx web server with Puppet
 
 exec {'apt_update':
-  command     => 'apt-get update',
-  path        => ['/usr/bin', '/usr/sbin'],
+  command  => 'apt update',
+  provider => shell,
 }
 
 package {'nginx':
-  ensure  => 'installed',
-  require => Exec['apt_update'],
+  ensure   => 'installed',
+  provider => apt,
+  require  => Exec['apt_update'],
 }
 
 exec {'header':
-  command => "sed -i '/root \\/var\\/www\\/html;/a\\ \\n\\tadd_header X-Served-By \"${hostname}\";' /etc/nginx/sites-available/default",
+  command => "sed -i '/root \\/var\\/www\\/html;/a\\ \\n\\tadd_header X-Served-By ${hostname};' /etc/nginx/sites-available/default",
   path    => ['/usr/bin', '/usr/sbin'],
   require => Package['nginx'],
 }
 
 exec {'restart':
-  command => 'service nginx restart',
-  path    => ['/usr/bin', '/usr/sbin'],
-  require => Exec['header'],
+  command  => 'sudo service nginx restart',
+  provider => shell,
+  require  => Exec['header'],
 }
