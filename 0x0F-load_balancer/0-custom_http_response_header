@@ -18,7 +18,7 @@ sudo sed -i "${SCRIPT_1}" "${FILE}"
 SCRIPT_2="\%${PATTERN}%a\ \n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}"
 sudo sed -i "${SCRIPT_2}" "${FILE}"
 
-SCRIPT_3="\%${PATTERN}%a\ \n\t# custom header\n\tadd_header X-Served-By \${hostname};"
+SCRIPT_3="\%${PATTERN}%a\ \n\t# custom header\n\tadd_header X-Served-By \"$(hostname)\";"
 sudo sed -i "${SCRIPT_3}" "${FILE}"
 
 sudo service nginx restart
