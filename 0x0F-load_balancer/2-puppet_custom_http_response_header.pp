@@ -31,7 +31,7 @@ exec {'redirection':
 }
 
 exec {'header':
-  command => "sed -i '/^server {/a\\ \\n\\tadd_header X-Served-By \"${hostname}\";' /etc/nginx/sites-available/default",
+  command => "sed -i '/^server {/a\\ \\n\\tadd_header X-Served-By ${hostname};' /etc/nginx/sites-available/default",
   path    => ['/usr/bin', '/usr/sbin'],
   require => Package['nginx'],
   notify  => Service['nginx'],
