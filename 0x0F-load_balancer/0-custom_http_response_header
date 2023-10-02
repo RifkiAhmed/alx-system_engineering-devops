@@ -7,14 +7,18 @@ echo "Hello World!" | sudo tee /var/www/html/index.html
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 
 REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+
 FILE="/etc/nginx/sites-available/default"
 
-SCRIPT_1="\%^\troot /var/www/html;%a\ \n\tlocation /redirect_me {\n\t\treturn 301 ${REDIRECTION};\n\t}"
+PATTERN="^\troot /var/www/html;"
+
+SCRIPT_1="\%${PATTERN}%a\ \n\tlocation /redirect_me {\n\t\treturn 301 ${REDIRECTION};\n\t}"
 sudo sed -i "${SCRIPT_1}" "${FILE}"
 
-SCRIPT_2="\%^\troot /var/www/html;%a\ \n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}"
+SCRIPT_2="\%${PATTERN}%a\ \n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}"
 sudo sed -i "${SCRIPT_2}" "${FILE}"
 
-SCRIPT_3="\%^\tlocation / {%a\ \t\t# custom header\n\t\tadd_header X-Served-By \${hostname};\n"
+SCRIPT_3="\%${PATTERN}%a\ \n\t# custom header\n\tadd_header X-Served-By \${hostname};"
 sudo sed -i "${SCRIPT_3}" "${FILE}"
+
 sudo service nginx restart
