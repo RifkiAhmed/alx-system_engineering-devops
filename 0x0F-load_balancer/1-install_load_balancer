@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on lb-01 server
+
+sudo apt-get update
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.8 -y
+sudo apt-get install haproxy=2.8.\* -y
+
+echo -e "\n# Send traffic to 392785-web-01 and 392785-web-02" > file.txt
+echo -e "\nbackend web-backend" >> file.txt
+echo -e "   balance roundrobin" >> file.txt
+echo -e "   server 392785-web-01 100.25.34.143:80 check" >> file.txt
+echo -e "   server 392785-web-02 54.85.11.239:80 check" >> file.txt
+echo -e "\nfrontend http" >> file.txt
+echo -e "   bind *:80" >> file.txt
+echo -e "   mode http" >> file.txt
+echo -e "   default_backend web-backend" >> file.txt
+
+FILE="/etc/haproxy/haproxy.cfg"
+
+sudo sed -i "\$r file.txt" "${FILE}"; rm file.txt
+
+sudo service haproxy restart
