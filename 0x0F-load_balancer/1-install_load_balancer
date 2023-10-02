@@ -2,9 +2,7 @@
 # Install and configure HAproxy on lb-01 server
 
 sudo apt-get update
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.8 -y
-sudo apt-get install haproxy=2.8.\* -y
+sudo apt-get install haproxy -y
 
 echo -e "\n# Send traffic to 392785-web-01 and 392785-web-02" > file.txt
 echo -e "\nbackend web-backend" >> file.txt
