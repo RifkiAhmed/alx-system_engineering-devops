@@ -19,7 +19,6 @@ echo -e '\tlocation = /404.html {\n\t\tinternal;\n\t}' >> file.txt
 FILE="/etc/nginx/sites-available/default"
 PATTERN="^\troot /var/www/html;"
 
-sudo sed -i "\%${PATTERN}%rfile.txt" "${FILE}"
-rm file.txt
+sudo sed -i "\%${PATTERN}%rfile.txt" "${FILE}"; rm file.txt
 
 sudo service nginx restart
