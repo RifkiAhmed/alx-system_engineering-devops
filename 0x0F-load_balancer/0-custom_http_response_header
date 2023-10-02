@@ -1,24 +1,25 @@
 #!/usr/bin/env bash
-# Install Nginx web server
+# Configures a brand new Ubuntu machine
 sudo apt-get update
 sudo apt-get install nginx -y
 
-echo "Hello World!" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+echo "Hello World!" > index.html
+echo "Ceci n'est pas une page" > 404.html
+sudo mv index.html 404.html /var/www/html/
 
-REDIRECTION="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+REDIRECTION="https://www.google.com/"
+echo -e '\n\t# Custom header' > file.txt
+echo -e '\tadd_header X-Served-By '\"$(hostname)\"';' >> file.txt
+echo -e '\n\t# Redirection' >> file.txt
+echo -e '\tlocation /redirect_me {\n\t\treturn 301 '${REDIRECTION}';\n\t}' >> file.txt
+echo -e '\n\t# Custom error page' >> file.txt
+echo -e '\terror_page 404 /404.html;' >> file.txt
+echo -e '\tlocation = /404.html {\n\t\tinternal;\n\t}' >> file.txt
 
 FILE="/etc/nginx/sites-available/default"
-
 PATTERN="^\troot /var/www/html;"
 
-SCRIPT_1="\%${PATTERN}%a\ \n\tlocation /redirect_me {\n\t\treturn 301 ${REDIRECTION};\n\t}"
-sudo sed -i "${SCRIPT_1}" "${FILE}"
-
-SCRIPT_2="\%${PATTERN}%a\ \n\terror_page 404 /404.html;\n\n\tlocation = /404.html {\n\t\tinternal;\n\t}"
-sudo sed -i "${SCRIPT_2}" "${FILE}"
-
-SCRIPT_3="\%${PATTERN}%a\ \n\t# custom header\n\tadd_header X-Served-By \"$(hostname)\";"
-sudo sed -i "${SCRIPT_3}" "${FILE}"
+sudo sed -i "\%${PATTERN}%rfile.txt" "${FILE}"
+rm file.txt
 
 sudo service nginx restart
