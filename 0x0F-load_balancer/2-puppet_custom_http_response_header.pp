@@ -12,7 +12,7 @@ package {'nginx':
 }
 
 exec {'header':
-  command => "sed -i '/root \\/var\\/www\\/html;/a\\ \\n\\tadd_header X-Served-By ${hostname};' /etc/nginx/sites-available/default",
+  command => "sed -i '/listen 80 default_server;/a\\ \\n\\tadd_header X-Served-By $hostname;' /etc/nginx/sites-available/default",
   path    => ['/usr/bin', '/usr/sbin'],
   require => Package['nginx'],
 }
