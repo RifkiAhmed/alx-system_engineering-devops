@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Print subdomain informations
+
+subdomain_info() {
+	domain="$1"
+	subdomain="$2"
+
+	if [ -n "$subdomain" ]; then
+		subdomains=("$subdomain")
+	else
+		subdomains=("www" "lb-01" "web-01" "web-02")
+	fi
+	
+	for subdomain in "${subdomains[@]}"
+	do
+		infos=$(dig "$subdomain.$domain" | grep -A1 'ANSWER SECTION:')
+		if [ -n "$infos" ]
+		then
+			record=$(echo "$infos" | awk '{print $4}')
+			address=$(echo "$infos" | awk '{print $5}')
+			printf "The subdomain %s is a %s record and points to %s\n" $subdomain $record $address
+		fi
+	done
+}
+
+# Retreive provided arguments
+if [ "$#" -eq 1 ]; then
+	domain="$1"
+	subdomain_info "$domain"
+elif [ "$#" -eq 2 ]; then
+	domain="$1"
+	subdomain="$2"
+	subdomain_info "$domain" "$subdomain"
+fi
+
