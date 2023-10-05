@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Configure Nginx to listen on port 80 and clear the nginx PID file
+sed -i 's/[0-9]\+ default/80 default/' /etc/nginx/sites-enabled/default
+service nginx restart > /dev/null 2>&1
+truncate -s 0 /run/nginx.pid
