@@ -34,19 +34,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-# Send traffic to 392785-web-01 and 392785-web-02
+# Forward traffic to 392785-web-01 and 392785-web-02 servers using roundrobin algorithm
 
 frontend http
         bind *:80
-        reqadd X-Forwarded-Proto:\ http
-        default_backend www-backend
+        http-request set-header X-Forwarded-Proto http
+        default_backend web-backend
 
 frontend https
         bind *:443 ssl crt /etc/haproxy/certs/www.riph.tech.pem
-        reqadd X-Forwarded-Proto:\ https
-        default_backend www-backend
+        request-http set-header X-Forwarded-Proto https
+        default_backend web-backend
 
-backend www-backend
+backend web-backend
         balance roundrobin
         server 392785-web-01 100.25.34.143:80 check
         server 392785-web-02 54.85.11.239:80 check
