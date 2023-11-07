@@ -13,7 +13,7 @@ def top_ten(subreddit):
             AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 \
                 Safari/537.36 Edg/119.0.0.0"
     }
-    url = 'https://www.reddit.com/r/{}/hot.json?limit=9'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
     try:
         response = requests.get(url, headers=header, allow_redirects=False)
         childrens = response.json().get('data').get('children')
