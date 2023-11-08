@@ -1,4 +1,4 @@
-# Puppet manifest to copy the content file 'default-filters.php' to 'default-filters.phpp' in /var/www/html/wp-includes
+# Puppet manifest to copy the content file 'class-wp-locale.php' to 'class-wp-locale.phpp' in /var/www/html/wp-includes
 
 file {'.phpp':
   ensure => 'file',
