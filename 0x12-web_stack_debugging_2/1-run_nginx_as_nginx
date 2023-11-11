@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Bash script that configure Nginx web server to run with the user nginx and to listen on all active IPs on port 8080
+# Bash script that configures Nginx web server to run with the user nginx and to listen on all active IPs on port 8080
 sed -i 's/[0-9]\+ default/8080 default/' /etc/nginx/sites-enabled/default
+chown nginx:nginx /etc/nginx/nginx.conf
 chmod 644 /etc/nginx/nginx.conf
-chown -R nginx:nginx /etc/nginx/
 pkill apache2
 sudo -u nginx service nginx restart
