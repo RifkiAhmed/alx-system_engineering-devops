@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-# Send a HUP signal to Gunicorn processes to reload it in a graceful way
-GUNICORN_PIDs=$(pgrep "gunicorn")
-if [ -n "$GUNICORN_PIDs" ]; then
-	for PID in $GUNICORN_PIDs; do
-		kill -HUP "$PID"
-	done
+# Send a HUP signal to Gunicorn master process to reload it in a graceful way
+GUNICORN_PID=$(pgrep "gunicorn" | head -n 1)
+if [ -n "$GUNICORN_PID" ]; then
+	kill -HUP "$GUNICORN_PID"
 fi
