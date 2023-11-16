@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Send a HUP signal to Gunicorn master process to reload it in a graceful way
-GUNICORN_PID=$(pgrep "gunicorn" | head -n 1)
+
+GUNICORN_PID=$(sudo systemctl status gunicorn | grep '^[[:space:]]*Main PID' | grep -o '[0-9]*')
 if [ -n "$GUNICORN_PID" ]; then
 	kill -HUP "$GUNICORN_PID"
 fi
