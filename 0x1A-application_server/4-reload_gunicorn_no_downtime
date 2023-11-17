@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# Send a HUP signal to Gunicorn master process to reload it in a graceful way
-
-
-# Check if the Gunicorn service exists in init.d
-if [ -f /etc/init.d/gunicorn ]; then
-    sudo /etc/init.d/gunicorn reload
-fi
-
